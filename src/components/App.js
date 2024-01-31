@@ -49,7 +49,7 @@ function App() {
   );
 
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
+    fetch("https://json-api-vercel.vercel.app/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "loading", payload: data }))
       .catch((err) => dispatch({ type: "error" }));
